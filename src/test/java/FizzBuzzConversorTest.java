@@ -23,4 +23,13 @@ public class FizzBuzzConversorTest {
         assertThat(resultado, is("Fizz"));
 
     }
+
+    @Test
+    public void converter_deveRetornarBuzz_quandoONumeroEMultiploDeCinco() {
+        FizzBuzzConversor conversor = new FizzBuzzConversor();
+
+        String resultado = conversor.converter(5);
+
+        assertThat(resultado, is("Buzz"));
+    }
 }
