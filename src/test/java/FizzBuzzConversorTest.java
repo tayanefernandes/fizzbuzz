@@ -32,4 +32,13 @@ public class FizzBuzzConversorTest {
 
         assertThat(resultado, is("Buzz"));
     }
+
+    @Test
+    public void converter_deveRetornarFizzBuzz_quandoONumeroEMultiploDeTresECinco() {
+        FizzBuzzConversor conversor = new FizzBuzzConversor();
+
+        String resultado = conversor.converter(15);
+
+        assertThat(resultado, is("FizzBuzz"));
+    }
 }
