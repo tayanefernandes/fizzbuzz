@@ -5,7 +5,7 @@ import static org.junit.Assert.assertThat;
 
 public class FizzBuzzConversorTest {
     @Test
-    public void converter_deveRetornarOProprio_quandoEleNaoEMultilploDeCincoNemTres() {
+    public void converter_deveRetornarOProprio_quandoONumeroNaoEMultilploDeCincoNemTres() {
         FizzBuzzConversor conversor = new FizzBuzzConversor();
 
         String resultado = conversor.converter(1);
@@ -13,5 +13,14 @@ public class FizzBuzzConversorTest {
 
         resultado = conversor.converter(2);
         assertThat(resultado, is("2"));
+    }
+
+    @Test
+    public void converter_deveRetornarFizz_quandoONumeroEMultiploDeTres(){
+        FizzBuzzConversor conversor = new FizzBuzzConversor();
+
+        String resultado = conversor.converter(6);
+        assertThat(resultado, is("Fizz"));
+
     }
 }
