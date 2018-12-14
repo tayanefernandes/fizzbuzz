@@ -1,18 +1,20 @@
 public class FizzBuzzConversor {
 
     public String converter(int numero) {
-        if(numero % 3 == 0 && numero % 5 == 0) {
-            return "FizzBuzz";
-        }
+        String resultado = "";
 
         if(numero % 3 == 0) {
-            return "Fizz";
+            resultado = resultado + "Fizz";
         }
 
         if(numero % 5 == 0) {
-            return "Buzz";
+            resultado = resultado + "Buzz";
         }
 
-        return String.valueOf(numero);
+        if(resultado.isEmpty()) {
+            resultado =  resultado + String.valueOf(numero);
+        }
+
+        return resultado;
     }
 }
